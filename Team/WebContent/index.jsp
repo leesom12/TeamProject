@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@include file="common_header.jsp" %>
 
-                    
+                   <div></div>
                     <div class="right">
                         <div class="search_area">
                             <div class="search">
