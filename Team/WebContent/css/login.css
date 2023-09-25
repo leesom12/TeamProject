@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.login_wrap{
+    width: 500px;
+    /* height: 400px; */
+    margin: 0 auto;
+    border: 3px solid rgb(226, 226, 226);
+    border-radius: 15px;
+    
+}
+.login_panel{
+    padding: 20px;
+    text-align: center;
+}
+.login_input{
+    width: 300px;
+}
+.login_panel div{
+    margin: 20px 0 20px 0;
+}
+.login_panel input{
+    /* width: 300px; */
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 2px solid #dadada;
+}
+.checkbox{
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+.btn{
+    width: 324px;
+    padding: 10px;
+    border-radius: 10px;
+    /* background-color: #979efc; */
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #bec2f9;
+    transition: 0.6s;
+}
+
+.find{
+    margin-top: 20px;
+    text-align: center;
+}
+.find a{
+    margin-right: 10px;
+}

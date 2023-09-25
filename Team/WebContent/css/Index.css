@@ -1,0 +1,460 @@
+﻿@import "reset.css";
+@import "login.css";
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+/* --------------헤더------------ */
+*{
+    font-family: 'LINESeedKR-Bd';
+}
+.header{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    font-family: 'LINESeedKR-Bd';
+}
+.header .fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header_top .top_in{
+    display: flex;
+    padding: 8px 40px 0;
+    height: 22px;
+}
+.header_top .top_list{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.header_top .top_list li{
+    margin-left: 20px;
+    font-size: 13px;
+    color: dimgrey;
+}
+.header_main{
+    margin-top: 25px;
+}
+.main_in{
+    display: flex;
+    padding: 20px 40px;
+    height: 64px;
+}
+
+.main_in .right{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.main_in .center{
+    display: flex;
+}
+.main_in .right_list{
+    display: flex;
+}
+.main_in .right_list li{
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.header_bottom{
+    margin: 10px 0 20px 20px;
+    /* padding: 10px; */
+}
+.bottom_list{
+    display: flex;
+}
+.bottom_list li{
+    margin-right: 13px;
+}
+
+/* --------------메뉴------------ */
+.main {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto 200px auto;
+    height: 1100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .main_left {
+    width: 30%;
+    margin-top: 100px;
+}
+
+.main .main_right {
+    width: 70%;
+    flex-grow: 1;
+    padding: 0 20px 0 20px;
+}
+
+.main .common_menu {
+    width: 270px;
+    max-width: 300px;
+    padding: 10px 0px 20px 0px;
+    border-radius: 5px;
+    background-color: #f7f7f6;
+}
+
+.link {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    padding-top: 10px;
+    overflow: hidden;
+    width: 90%;
+    margin-left: 5%;
+    cursor: pointer;
+    border-top: 1px solid #A4A4A4;
+}
+
+.link_title {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 90%;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.link a:hover {
+    transform: translateY(0%) translateZ(0) scale(1.1);
+    font-weight: 600;
+}
+
+
+.sticky_box {
+    position: sticky;
+    top: 15px;
+    height: 500px;
+}
+
+/* --------------관리자------------ */
+.main_title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.list{
+    margin: 0 auto 40px auto;
+    border-top: 1px solid dimgray;
+    padding-top: 5px;
+}
+
+.admin_list {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.admin_list .product_picture{
+    width: 110px;
+    height: 110px;
+    background-color: gray;
+    margin-right: 10px;
+}
+
+.admin_list .product_explain{
+    width: 50%;
+    height: 110px;
+    margin: 0 5px;
+}
+
+.product_explain .product_number{
+    height: 26px;
+    padding-top: 10px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.product_explain .product_name {
+    height: 26px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.admin_list .product_price {
+    width: 10%;
+    text-align: center;
+    height: 110px;
+    line-height: 110px;
+}
+
+.admin_list .product_regDate {
+    width: 10%;
+    text-align: center;
+    height: 110px;
+    line-height: 110px;
+}
+
+.admin_list .product_state {
+    width: 10%;
+    text-align: center;
+    height: 110px;
+    line-height: 110px;
+    font-weight:600;
+}
+
+.admin_list .product_state2 {
+    width: 10%;
+    text-align: center;
+    height: 110px;
+    line-height: 110px;
+}
+
+.admin_list .product_state2 .stateButton {
+    width: 75px;
+    height: 40px;
+    font-weight: 600;
+    background-color: lightgray;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+/* --------------인덱스 메인------------ */
+
+.line {
+    padding: 40px 0 40px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+.banner{
+    width: 100%;
+    height: 500px;
+    background-color: gray;
+}
+.container{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.items{
+    margin-top: 40px;
+}
+.items_box :hover{
+    opacity: 0.8;
+    color: rgb(52, 12, 255);
+    transition: 0.5s;
+}
+.items_wrap{
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.items_box{
+    width: 230px;
+    height: 155px;
+}
+.img_box img{
+    width: 100%;
+    height: 300px;
+}
+
+.items_box .items_image{
+    width: 230px;
+    height: 120px;
+    background-color: rgb(237, 145, 145);
+    margin-right: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.items_box .items_text{
+    width: 230px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.main_product{
+    margin-top: 40px;
+}
+.product_title{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 15px;
+}
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.sub_title{
+    font-size: 14px;
+    color: gray;
+}
+.product_list_wrap{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.product_list{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    grid-column-gap: 8px;
+    -webkit-column-gap: 8px;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    grid-row-gap: 28px;
+    row-gap: 28px;
+}
+.product_item{
+    width: 280px;
+    height: 300px;
+    background-color: gray; 
+}
+
+.product .product_text{
+    width: 280px;
+    height: 55px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.product .product_text .product_company{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 3px 0;
+}
+
+.product .product_text .product_name {
+     font-size: 13px;
+     padding: 3px 0;
+}
+
+.product .product_text .product_price {
+     font-size: 14px;
+     font-weight: 600;
+     padding: 3px 0;
+}
+
+/* --------------푸터------------ */
+.footer {
+    width: 100%;
+    max-width: 2500px;
+    margin: 0 auto;
+    font-family: 'LINESeedKR-Bd';
+}
+
+.footer_top {
+    width: 100%;
+    height: 180px;
+    margin: 0;
+    display: flex;
+    justify-content:space-between;
+}
+
+.footer_top .footer_a {
+    width: 33%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.footer_top .footer_b {
+    width: 40%;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_top .footer_a #a {
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 5px;
+}
+
+.footer_top .footer_a #b {
+    color: dimgrey;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 5px;
+}
+
+.footer_top .footer_a #c {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 5px;
+    margin: 5px;
+    width: 200px;
+}
+
+.v_line {
+    border-right: thin solid #898989;
+    height: 250px;
+}
+
+.footer_top .footer_b #footer_title {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    margin: 5px;
+}
+
+.footer_top .footer_b #d {
+    font-size: 14px;
+    color: dimgray;
+    font-weight: 500;
+    padding: 5px;
+    margin: 5px;
+}
+
+.footer .footer_c {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0 30px 30px;
+}
+
+.footer .footer_c p {
+    font-size: 12px;
+    color: dimgrey;
+    text-align: left;
+    padding: 5px 0;
+}
+
+.footer_c .footer_in {
+    width: 300px;
+    height: 22px;
+    margin-bottom: 20px;
+}
+
+.footer_c .footer_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_c .footer_list li{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+}
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="../css/pay.css" rel=stylesheet>
+<script src="https://kit.fontawesome.com/17da812ad5.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".card").click(function() {
+            $(".pay_4").hide();
+        });
+        $(".cash").click(function() {
+            $(".pay_4").show();
+        });
+    });
+</script>
+<script>
+	function goOrder(){
+		
+	}
+</script>
+</head>
+<body>
+	<header>
+		
+		 <div class="header fixed">
+            <div class="header_top">
+                <div class="top_in">
+                    <ul class="top_list">
+                        <li><a href="">고객센터</a></li>
+                        <li><a href="">마이페이지</a></li>
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_main">
+                <div class="main_in">
+                    <div class="logo">
+                        <a href="">로고자리</a>
+                    </div>
+                    <div class="center"></div>
+                    <div class="right">
+                        <ul class="right_list">
+                            <li><a href="">중고악기</a></li>
+                            <li><a href="">중고악기</a></li>
+                            <li><a href="">중고악기</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+              
+            </div>
+        </div>
+		
+	</header>
+	
+	<nav>
+		<h1>장바구니</h1>
+	</nav>
+	
+	<section>
+		<div class = "container">
+		
+		<p_info>
+            <table border="1" cellpadding="10" cellspacing="0" width="1500" height="250">
+                <thead>
+                    <tr height="80">
+                    	<th width="100"><input type="checkbox" name="" value=""></th>
+                        <th colspan="2">상품명</th>		
+                        <th width="150">수량</th>
+                        <th width="150">판매가</th>
+                        <th width="150">배송비</th>
+                        <th width="150">주문금액</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    	<td><input type="checkbox" name="" value=""></td>
+                        <td style="border-right:none">
+                            <div class="pic">
+                                <img src="images/기타.png"  width="160" height="160" alt>	
+                            </div>
+                        </td>
+                        <td style="border-left:none">Jackson - X Series Adrian Smith San Dimas SDXQM / 잭슨 애드리안 스미스 시그니처 (Trans Green)</td>
+                        <td>1</td>
+                        <td>948,970</td>
+                        <td>3000</td>
+                        <td style="color: red";>951,970</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </p_info>
+        
+        <div class="select">
+            <button type="button" onclick="" class="one">선택삭제</button>
+            <button type="button" onclick="" class="total">전체삭제</button>
+        </div>
+        
+         <div class="pay">         
+
+            <div class="t_count" style="padding-top: 20px;">
+                <span>총 결제금액</span>
+                <br><br>
+                <strong style="color: red">951,970</strong>원
+            </div>
+
+            
+
+            <div class="select_1" style="margin-top: 50px;">
+                <button type="button" onclick="" class="one_1">쇼핑 계속하기</button>
+                <button type="button" onclick="" class="total_1">주문하기</button>
+            </div>
+            
+        </div>
+			
+		</div>
+		
+	</section>
+	
+	<footer>
+		
+		<div class="line"></div>
+
+    <div class="footer">
+        <div class="footer_top">
+            <div class="footer_b">
+                <div style="width: 50%;">
+                    <p id="footer_title">이용안내</p>
+                    <p id="d">검수기준</p>
+                    <p id="d">이용정책</p>
+                    <p id="d">패널티 정책</p>
+                    <p id="d">커뮤니티 가이드 라인</p>
+                </div>
+                <div style="width: 50%;">
+                    <p id="footer_title">고객지원</p>
+                    <p id="d">공지사항</p>
+                    <p id="d">서비스 소개</p>
+                    <p id="d">스토어 안내</p>
+                </div>
+            </div>
+            <div class="footer_a">
+                <p id="a">고객센터 1600-8888</p>
+                <p id="b">운영시간 평일 09:00 - 18:00 (토∙일, 공휴일 휴무) </p>
+                <p id="b">점심시간 평일 13:00 - 14:00</p>
+                <a href=""><div id="b"> 카톡상담: 09:00~20:00</div></a>
+                <a href=""><div id="b"> 이메일 문의 </div></a>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="footer_c">
+            <div class="footer_in">
+                <ul class="footer_list">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보 처리방침</a></li>
+                </ul>
+            </div>
+
+            <p>(주)버킷플레이스 | 대표이사 이승재 </p>
+            <p>서울 서초구 서초대로74길 4 삼성생명서초타워 25층, 27층 | contact@bucketplace.net | 사업자등록번호 119-86-91245 사업자정보확인 | 통신판매업신고번호 제2018-서울서초-0580호</p>
+            <p>(주)버킷플레이스는 통신판매중개자로 거래 당사자가 아니므로, 판매자가 등록한 상품정보 및 거래 등에 대해 책임을 지지 않습니다. 단, (주)버킷플레이스가 판매자로 등록 판매한 상품은 판매자로서 책임을 부담합니다.</p>
+            <p>Copyright 2014. bucketplace, Co., Ltd. All rights reserved.</p>
+        </div>
+    </div>
+		
+	</footer>
+</body>
+</html>

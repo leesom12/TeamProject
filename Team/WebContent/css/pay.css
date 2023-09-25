@@ -1,0 +1,387 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+*{
+    font-family: 'LINESeedKR-Bd';
+    margin: 0; padding: 0;
+}
+a{text-decoration: none;}
+ul{list-style-type: none;}
+
+
+/* --------------헤더------------ */
+.header{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+}
+.header .fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header_top .top_in{
+    display: flex;
+    padding: 8px 40px 0;
+    height: 22px;
+}
+.header_top .top_list{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.header_top .top_list li{
+    margin-left: 20px;
+    font-size: 13px;
+    color: dimgrey;
+}
+.header_main{
+    margin-top: 25px;
+}
+.main_in{
+    display: flex;
+    padding: 20px 40px;
+    height: 64px;
+}
+
+.main_in .right{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.main_in .center{
+    display: flex;
+}
+.main_in .right_list{
+    display: flex;
+}
+.main_in .right_list li{
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.header_bottom{
+    margin: 10px 0 20px 20px;
+    /* padding: 10px; */
+}
+.bottom_list{
+    display: flex;
+}
+.bottom_list li{
+    margin-right: 13px;
+}
+/* --------------헤더------------ */	
+
+/* --------------푸터------------ */
+.footer_top {
+    height: 180px;
+    margin: 0;
+    display: flex;
+    justify-content:space-between;
+}
+
+.footer_top .footer_a {
+    width: 33%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.footer_top .footer_b {
+    width: 40%;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_top .footer_a #a {
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 5px;
+}
+
+.footer_top .footer_a #b {
+    color: dimgrey;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 5px;
+}
+
+.footer_top .footer_a #c {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 5px;
+    margin: 5px;
+    width: 200px;
+}
+
+.v_line {
+    border-right: thin solid #898989;
+    height: 250px;
+}
+
+.footer_top .footer_b #footer_title {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    margin: 5px;
+}
+
+.footer_top .footer_b #d {
+    font-size: 14px;
+    color: dimgray;
+    font-weight: 500;
+    padding: 5px;
+    margin: 5px;
+}
+
+.footer .footer_c {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0 30px 30px;
+}
+
+.footer .footer_c p {
+    font-size: 12px;
+    color: dimgrey;
+    text-align: left;
+    padding: 5px 0;
+}
+
+.footer_c .footer_in {
+    width: 300px;
+    height: 22px;
+    margin-bottom: 20px;
+}
+
+.footer_c .footer_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_c .footer_list li{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* --------------푸터------------ */
+
+/* --------------섹션------------ */
+
+nav{
+	padding: 20px 0;
+    margin-left: 220px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1500px;
+    height: 1400px;
+    padding: 20px 20px;
+
+}
+
+p_info table tr td{
+    text-align: center;
+}
+
+.pic{
+    margin-left: 10px;
+    width: 250px;
+    height: 160px;
+}
+
+.d_info{
+    float: left;
+    margin-top: 50px;
+    width: 900px;
+    height: 1000px;
+   
+}
+
+.order{
+	border: 1px solid gray;
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
+    
+}
+
+.order h2{
+	padding: 20px 20px;
+}
+
+.order table{
+	margin: 0 auto;
+	width: 700px;
+	height: 420px;
+}
+
+.payment{
+    float: left;
+    margin-top: 50px;
+    width: 600px;
+    height: 1025px;
+    background: #eaeaea;
+}
+
+.pay_1{
+	border: 1px solid gray;
+	width: 550px;
+	height: 130px;
+	margin: 0 auto;
+	background: white;
+}
+
+.pay_1 .box_1{
+	border-right: 1px solid gray;
+	width: 180px;
+	height: 130px;
+	text-align: center;
+}
+
+.pay_1 .box_2{
+	border-right: 1px solid gray;
+	width: 180px;
+	height: 130px;
+	text-align: center;
+}
+
+.pay_1 .box_3{
+	width: 180px;
+	height: 130px;
+	text-align: center;
+}
+
+.pay_1 div{
+	float: left;
+	font-size: 25px;
+}
+
+.pay_2 table{
+	margin-top: 20px;
+	margin-left: 25px;
+	border: 1px solid red;
+	width: 550px;
+	height: 120px;
+}
+
+.pay_3{
+
+	margin: 20px 24px;
+}
+
+.pay_3 h3{
+	padding: 20px 0;
+}
+
+
+.pay_4{
+	border: 1px solid gray;
+	margin-top: 20px;
+	margin-left: 25px;
+	width: 530px;
+	height: 120px;
+	padding: 10px 10px;
+}
+
+.f_order table{
+	margin: 0 auto;
+	padding: 30px;
+}
+
+.f_order table input{
+	width: 230px;
+	height: 50px;
+	font-size: 20px;
+}
+
+.cash{
+	background: white;
+	margin-bottom: 30px;
+	height: 50px;
+	padding: 10px 0;
+	padding-left: 10px;
+}
+
+.card{
+	background: white;
+	height: 50px;
+	padding: 10px 0;
+	padding-left: 10px;
+}
+
+.coin{
+	font-size: 50px;
+	float: left;
+	padding-right: 20px;
+}
+
+.select{
+	margin-top: 10px;
+}
+
+.one{
+    background: #757575;
+    text-align: center;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+
+.total{
+    background: #ca1d1d;
+    text-align: center;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+
+.pay{
+    margin-top: 50px;
+    float: left;
+    width: 1500px;
+    height: 300px;
+}
+
+.t_count{
+    text-align: center;
+    width: 1000px;
+    height: 100px;
+    margin-left: 250px;
+    font-size: 20px;
+}
+
+.select_1{
+    margin-top: 50px;
+    float: left;
+    width: 500px;
+    height: 100px;
+    margin-left: 606px;
+}
+
+.one_1{
+    background: #757575;
+    text-align: center;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 18x;
+}
+
+.total_1{
+    background: #ca1d1d;
+    text-align: center;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 18x;
+}
