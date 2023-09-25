@@ -178,6 +178,65 @@
                     </div>
                 </div>
             </div>
+            <div style="height:80px;"></div>
+            <div class="main_product">
+                <div class="product_title">
+                    <div class="title">New in</div>
+                    <div class="sub_title">신규 등록 상품</div>
+                </div>
+                <div class="product_list_wrap">
+                    <div class="product_list">
+                        <div class="product">
+                            <div class="product_item">
+                                <a href="">
+                                    <div class="img_box"><img src="image/new1.png"></div>
+                                </a>
+                            </div>
+                            <div class="product_text">
+                                <p class="product_company">YAMAHA</p>
+                                <p class="product_name">바이올린세트V3S</p>
+                                <p class="product_price">460,000원</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product_item">
+                                <a href="">
+                                    <div class="img_box"><img src="image/new2.png"></div>
+                                </a>
+                            </div>
+                            <div class="product_text">
+                                <p class="product_company">YAMAHA</p>
+                                <p class="product_name">야마하 몽타주8 88건반</p>
+                                <p class="product_price">3,970,000원</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product_item">
+                                <a href="">
+                                    <div class="img_box"><img src="image/new3.png"></div>
+                                </a>
+                            </div>
+                            <div class="product_text">
+                                <p class="product_company">효정바이올린</p>
+                                <p class="product_name">효정hv400 4/4사이즈</p>
+                                <p class="product_price">450,000원</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product_item">
+                                <a href="">
+                                    <div class="img_box"><img src="image/new4.png"></div>
+                                </a>
+                            </div>
+                            <div class="product_text">
+                                <p class="product_company">삼익</p>
+                                <p class="product_name">삼익 DP-500 전자피아노 (그랜드피아노건반)</p>
+                                <p class="product_price">880,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
