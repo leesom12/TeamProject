@@ -1,8 +1,11 @@
 package dto;
 
 public class MemberDto {
-	private String id, name, password, address, tel, reg_date, exit_date;
+	private String id, name, password, address, tel, reg_date, exit_date, sangjumname, sangjumsoge;
 
+	
+	
+	
 	//회원가입
 	public MemberDto(String id, String name, String password, String address, String tel, String reg_date) {
 		super();
@@ -12,6 +15,13 @@ public class MemberDto {
 		this.address = address;
 		this.tel = tel;
 		this.reg_date = reg_date;
+	}
+	//상점명,소개 변경
+	public MemberDto(String id, String sangjumname, String sangjumsoge) {
+		super();
+		this.id = id;
+		this.sangjumname = sangjumname;
+		this.sangjumsoge = sangjumsoge;
 	}
 
 	public MemberDto(String id, String name, String password, String address, String tel, String reg_date,
@@ -24,6 +34,15 @@ public class MemberDto {
 		this.tel = tel;
 		this.reg_date = reg_date;
 		this.exit_date = exit_date;
+	}
+
+	
+	public String getSangjumname() {
+		return sangjumname;
+	}
+
+	public String getSangjumsoge() {
+		return sangjumsoge;
 	}
 
 	public String getId() {

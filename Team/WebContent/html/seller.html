@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Project</title>
     <link rel="stylesheet" href="../css/seller.css">
+    <script>
+    	function goSangjumUpdate(){
+    		if(checkValue(mem.t_sangjum_name,"상점명을 입력해 주세요")) return;
+    	}
+    </script>
 </head>
 <body>
     <!-- 헤더 -->
@@ -53,7 +58,7 @@
             </div>
         </div>
     <!-- 메뉴 (밑에 div class="main_right"까지 가져가셔야 작동됩니다. main_right 안에 본인이 맡은 메인 구성 넣으시면 됩니다.)-->
-
+		
         <div class="main_right">
             <div class="view_header">
                 <a href="Index.html">
@@ -74,8 +79,10 @@
                                             <div class="seller_image5"></div>
                                         </div>
                                         <div class="seller_sangse">
-                                            <img src="image/hitori.png" class="seller_png" width="194" height="194">
-                                            <div class="sangjum_name">봇치</div>
+                                            <img src="../image/mysell.png" class="seller_png" width="194" height="194">
+                                            <div class="sangjum_name">
+                                            	아이디
+                                            </div>
                                             <div class="sangpumsu">
                                                 <a href="seller.html" class="gesu">
                                                     상품
@@ -86,31 +93,35 @@
                                     </div>
                                 </div>
                             </div>
+                            <form name="mem">
                             <div class="seller_name">
                                 <div class="namepart">
-                                    <div class="name">봇치</div>
+                                    <input type="text" name="t_sangjum_name" value="아이디" style="border:none;font-size:23px;" maxlength="10">
                                 </div>
                                 <div class="sangjum_jungbo">
                                     <div class="opendate">
-                                        <img src="image/opendate.png" width="14" height="13">
+                                        <img src="../image/opendate.png" width="14" height="13">
                                         오픈일
                                         <div class="opendate_date">9일전</div>
                                     </div>
                                     <div class="panmesu">
-                                        <img src="image/panmesu.png" width="14" height="13">
+                                        <img src="../image/panmesu.png" width="14" height="13">
                                         총판매
                                         <div class="panmesu_su">0회</div>
                                     </div>
                                     <div class="sangjum_sangpum">
-                                        <img src="image/sangpumsu.png" width="14" height="13">
+                                        <img src="../image/sangpumsu.png" width="14" height="13">
                                         상품
                                         <div class="sangpumsu_su">5개</div>
                                     </div>
                                 </div>
+                                
                                 <div class="sangjum_soge">
-                                    <p class="soge">봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점봇치의 상점</p>
+                                    <textarea class="soge" name="t_sangjum_soge" style="border:none;font-size:15px;width:450px;height:100px;resize: none;" maxlength="165">봇치의 상점</textarea>    
                                 </div>
+                                <input type="button" value="변경" onclick="goSangjumUpdate()" style="float:right;width:80px;">
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>

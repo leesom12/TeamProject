@@ -94,9 +94,34 @@ public class MemberDao {
         }
          
         return encryptData;
-    }    
+    }
 
 
+	 
+
+    //상점 정보 변경
+    public int getSangjumUpdate(MemberDto dto) {
+		int result = 0;
+		String query = "update team_이소민_member\r\n" + 
+				"        SET sangjumname = '"+dto.getSangjumname()+"',\r\n" + 
+				"            sangjumsoge = '"+dto.getSangjumsoge()+"'\r\n" + 
+				"        where id = '"+dto.getId()+"' ";
+		
+		try {
+			con = DBConnection.getConnection();
+			ps=con.prepareStatement(query);
+			rs=ps.executeQuery();
+		}catch(Exception e) {
+			e.printStackTrace();
+			System.out.println(query);
+		}finally {
+			DBConnection.closeDB(con, ps, rs);
+		}
+		
+		
+		
+		return result;
+	}   
     
     
     
