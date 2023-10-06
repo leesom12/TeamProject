@@ -20,6 +20,12 @@
 		mem.action="MemberController";
 		mem.submit();
 	}
+	function goUpload(gubun){
+		mem.t_gubun.value = gubun;
+		mem.method="post";
+		mem.action="ProductController";
+		mem.submit();
+	}
 </script>
     
 </head>
@@ -40,6 +46,7 @@
                         	<li><a href="javascript:goMemberPage('memberJoin')">회원가입</a></li>
                         <%} else{%>
                        		 <li><a href="">마이페이지</a></li>
+                       		 <li><a href="javascript:goUpload('uploadForm')">상품등록</a></li>
                        		 <li><a href="javascript:goMemberPage('memberLogout')">로그아웃</a></li>
                         <%} %>
                     </ul>
