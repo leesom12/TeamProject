@@ -45,7 +45,7 @@ public class Product_Save implements CommonExcute {
 		String msg = "등록성공!";
 		if(result == 0) msg = "등록실패!";
 		request.setAttribute("t_msg", msg);
-		request.setAttribute("t_url", "index.jsp");
+		request.setAttribute("t_url", "Index");
 	}
 
 }

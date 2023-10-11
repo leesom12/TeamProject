@@ -10,20 +10,7 @@
 	}
 </script>
 
-<style>
-	#preview-image{
-		border:1px solid gray;
-		width:350px;
-		height:350px;
-		margin:0 0 10px 50px;
-	}
-	.view_img{
-		border:1px solid gray;
-		width:350px;
-		height:350px;
-		margin:0 0 10px 50px;
-	}
-</style>		
+	
 <main>
 	<div class="container">
         <div class="write_wrap">
@@ -64,6 +51,6 @@
         </div>
 </main>
 
- <%@ include file="../common_footer.jsp" %>
+
 </body>
 </html>
