@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import command.member.MemberJoin;
 import command.member.MemberLogin;
 import command.member.MemberLogout;
+import command.member.MemberSeller;
 import common.CommonExcute;
 
 /**
@@ -63,6 +64,12 @@ public class MemberController extends HttpServlet {
 			CommonExcute ce= new MemberLogout();
 			ce.execute(request);
 			viewPage="common_alert.jsp";
+		}
+		//마이페이지
+		else if(gubun.equals("memberPage")) {
+			CommonExcute ce= new MemberSeller();
+			ce.execute(request);
+			viewPage = "seller/seller.jsp";
 		}
 		
 		RequestDispatcher rd= request.getRequestDispatcher(viewPage);

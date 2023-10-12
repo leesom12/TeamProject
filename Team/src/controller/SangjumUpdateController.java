@@ -40,7 +40,6 @@ public class SangjumUpdateController extends HttpServlet {
 		MemberDao dao = new MemberDao();
 		
 		String id   = request.getParameter("t_id");
-		
 		String name = request.getParameter("t_sangjum_name");
 		String soge = request.getParameter("t_sangjum_soge");
 		

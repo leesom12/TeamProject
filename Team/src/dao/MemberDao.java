@@ -121,7 +121,59 @@ public class MemberDao {
 		
 		
 		return result;
-	}   
+	}
+
+
+	public MemberDto getSellerView(String id) {
+		MemberDto dto = null;
+		String query = "select sangjumname,sangjumsoge,\r\n" + 
+				"to_char(reg_date,'yyyy\"/\"mm')as reg_date\r\n" + 
+				"from team_이소민_member\r\n" + 
+				"where id = '"+id+"'";
+		
+		try {
+			con=DBConnection.getConnection();
+			ps=con.prepareStatement(query);
+			rs=ps.executeQuery();
+			if(rs.next()) {
+				String name = rs.getNString("sangjumname");
+				String soge = rs.getString("sangjumsoge");
+				String reg_date = rs.getNString("reg_date");
+				dto = new MemberDto(id, reg_date, name, soge);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBConnection.closeDB(con, ps, rs);
+		}
+		
+		
+		return dto;
+	}
+
+
+	public int getSangpumsu(String id) {
+		int count = 0;
+		String query="select count(p_no)as count from team_이소민_product\r\n" + 
+				"where id = '"+id+"'";
+		
+		try {
+			con=DBConnection.getConnection();
+			ps=con.prepareStatement(query);
+			rs=ps.executeQuery();	
+			if(rs.next()) {
+				count = rs.getInt("count");
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBConnection.closeDB(con, ps, rs);
+		}
+		return count;
+	}
+
+
+	
     
     
     

@@ -20,6 +20,13 @@
 		mem.action="MemberController";
 		mem.submit();
 	}
+	
+	function goSellerPage(gubun){
+		seller.t_gubun.value="memberPage";
+		seller.method="post";
+		seller.action="MemberController";
+		seller.submit();
+	}
 </script>
     
 </head>
@@ -27,6 +34,10 @@
 <body>
 <form name="mem">
 	<input type="hidden" name="t_gubun">
+</form>
+<form name="seller">
+	<input type="hidden" name="t_gubun">
+	<input type="hidden" name="t_id" value="${sessionId}">
 </form>
     <!-- 헤더 -->
     <header>
@@ -39,7 +50,7 @@
                         	<li><a href="javascript:goMemberPage('memberLogin')">로그인</a></li>
                         	<li><a href="javascript:goMemberPage('memberJoin')">회원가입</a></li>
                         <%} else{%>
-                       		 <li><a href="">마이페이지</a></li>
+                       		 <li><a href="javascript:goSellerPage('memberPage')">마이페이지</a></li>
                        		 <li><a href="javascript:goMemberPage('memberLogout')">로그아웃</a></li>
                         <%} %>
                     </ul>

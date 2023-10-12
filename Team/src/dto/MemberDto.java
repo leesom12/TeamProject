@@ -23,6 +23,14 @@ public class MemberDto {
 		this.sangjumname = sangjumname;
 		this.sangjumsoge = sangjumsoge;
 	}
+	//seller
+	public MemberDto(String id, String reg_date, String sangjumname, String sangjumsoge) {
+		super();
+		this.id = id;
+		this.reg_date = reg_date;
+		this.sangjumname = sangjumname;
+		this.sangjumsoge = sangjumsoge;
+	}
 
 	public MemberDto(String id, String name, String password, String address, String tel, String reg_date,
 			String exit_date) {
@@ -36,6 +44,7 @@ public class MemberDto {
 		this.exit_date = exit_date;
 	}
 
+	
 	
 	public String getSangjumname() {
 		return sangjumname;

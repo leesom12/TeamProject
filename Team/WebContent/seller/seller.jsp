@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String sessionId = (String)session.getAttribute("sessionId"); %>    
+<%  %>    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +27,9 @@
     				        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
     					},
     					success : function(data){
-    						alert(data);
-    					
+    						var result = $.trim(data);
+    						alert(result);
+    						mem.t_sangjum_name.value = result;
     					}
     				});				
     			}
@@ -89,7 +90,7 @@
 		
         <div class="main_right">
             <div class="view_header">
-                <a href="Index.html">
+                <a href="index.jsp">
                     <div class="view_home">
                          <img src="../image/home.png" width="15" height="15">
                          홈 
@@ -109,12 +110,12 @@
                                         <div class="seller_sangse">
                                             <img src="../image/mysell.png" class="seller_png" width="194" height="194">
                                             <div class="sangjum_name">
-                                            	아이디
+                                            	${t_dto.getId()}
                                             </div>
                                             <div class="sangpumsu">
                                                 <a href="seller.html" class="gesu">
                                                     상품
-                                                    <b>5</b>
+                                                    <b>${t_count}</b>
                                                 </a>
                                             </div>
                                         </div>
@@ -122,16 +123,16 @@
                                 </div>
                             </div>
                             <form name="mem">
-                            <input type="hidden" name="t_id" value="<%=sessionId%>">
+                            <input type="hidden" name="t_id" value="${t_dto.getId()}">
                             <div class="seller_name">
                                 <div class="namepart">
-                                    <input type="text" name="t_sangjum_name" value="아이디" style="border:none;font-size:23px;" maxlength="10">
+                                    <input type="text" name="t_sangjum_name" value="${t_dto.getId()}" style="border:none;font-size:23px;" maxlength="10">
                                 </div>
                                 <div class="sangjum_jungbo">
                                     <div class="opendate">
                                         <img src="../image/opendate.png" width="14" height="13">
                                         오픈일
-                                        <div class="opendate_date">9일전</div>
+                                        <div class="opendate_date">${t_dto.getReg_date()}</div>
                                     </div>
                                     <div class="panmesu">
                                         <img src="../image/panmesu.png" width="14" height="13">
@@ -141,12 +142,12 @@
                                     <div class="sangjum_sangpum">
                                         <img src="../image/sangpumsu.png" width="14" height="13">
                                         상품
-                                        <div class="sangpumsu_su">5개</div>
+                                        <div class="sangpumsu_su">${t_count}개</div>
                                     </div>
                                 </div>
                                 
                                 <div class="sangjum_soge">
-                                    <input type="text" class="soge" name="t_sangjum_soge" value="봇치의 상점" style="border:none;font-size:15px;width:450px;height:100px;resize: none;" maxlength="165">
+                                    <input type="text" class="soge" name="t_sangjum_soge" value="상점소개" style="border:none;font-size:15px;width:450px;height:100px;resize: none;" maxlength="165">
                                 </div>
                                 <input type="button" value="변경" onclick="goSangjumUpdate()" style="float:right;width:80px;">
                             </div>
@@ -160,7 +161,7 @@
                     <div class="sangpumgesu">
                         <div class="sangpum">
                             상품
-                            <span class="all_sangpumsu">5</span>
+                            <span class="all_sangpumsu">${t_count}</span>
                         </div>
                     </div>
                     <div class="sangpumsu_main">
@@ -169,7 +170,7 @@
                                 <div class="all_sangpumsu4">
                                     <div>전체</div>
                                     <div class="all_sangpumsu5">
-                                        5개
+                                        ${t_count}개
                                     </div>
                                     <div class="sangpum_search_body">
                                         <div class="sangpum_search">
