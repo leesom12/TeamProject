@@ -12,7 +12,7 @@
 
 	
 <main>
-	<div class="container">
+	
         <div class="write_wrap">
         <h2 class="sr-only">상품등록</h2>
         
@@ -45,12 +45,13 @@
              
               <div class="btn_wrap">
                   <input type="submit" onClick="goSave()" value="등록" class="btn_ok">
-                  <a href="javascript:goSave()" class="butt">Save</a>
               </div>
          	
         </div>
+<div>
+<%@ include file="../common_footer.jsp" %>  
+</div>   
 </main>
-
 
 </body>
 </html>

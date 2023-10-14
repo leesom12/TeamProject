@@ -4,14 +4,23 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>    
 <%@ page import="dao.*,dto.*,common.*"%>
 <%@include file="common_header.jsp" %>
-
+<script>
+	function goSearch(){
+		sea.method="post";
+		sea.action="ProductController";
+		sea.submit();
+	}
+</script>
                     
                     <div class="right">
                         <div class="search_area">
+                        <form name="sea">
                             <div class="search">
-                                <input type="text">
-                                <a href="" style="font-size:20px;">search</a>
+                                <input type="text" name="t_search">
+                                <input type="hidden" name="t_gubun" value="search">
+                                <a href="javascript:goSearch()" style="font-size:20px;">search</a>
                             </div>
+                        </form>
                         </div>
                     </div>
                 </div>
@@ -68,7 +77,7 @@
 																							
                                 <div class="product_item">
                                     <div class="img_box">
-									<img src="image/white_piano.jpg">
+									<img src="image/Kurzweil KA-50.jpg">
 									</div>
                                 </div>
                             </a>
@@ -82,7 +91,7 @@
                             <div class="product_item">
                                 <a href="">
                                     <div class="img_box">
-										<img src="image/star_piano.jpg">
+										<img src="image/Kurzweil M130W (WH).jpg">
 									</div>
                                 </a>
                             </div>
@@ -96,7 +105,7 @@
                             <div class="product_item">
                                 <a href="">
                                     <div class="img_box">
-										<img src="image/yamaha_piano.jpg">
+										<img src="image/Pearl - Export EXX Drum Set.jpg">
 									</div>
                                 </a>
                             </div>
@@ -110,7 +119,7 @@
                             <div class="product_item">
                                 <a href="">
                                     <div class="img_box">
-										<img src="image/cra_gxe-600 able.jpg">
+										<img src="image/Pearl Roadshow Drum Set.jpg">
 									</div>
                                 </a>
                             </div>
@@ -123,6 +132,17 @@
                     </div>
                 </div>
             </div>
+<script>
+	function goProduct(){
+		pro.t_gubun.value="view";
+		pro.method="post";
+		pro.action="ProductController";
+		pro.submit();
+	}
+</script>
+<form name="pro">
+	<input type="hidden" name="t_gubun">
+</form>
             <div style="height:80px;"></div>
             <div class="main_product">
                 <div class="product_title">
@@ -132,9 +152,10 @@
                 <div class="product_list_wrap">
                     <div class="product_list">
                     <c:forEach items="${t_productDtos}" var="dto">
+                    
                         <div class="product">
                             <div class="product_item">
-                                <a href="">
+                                <a href="javascript:goProduct()">
                                     <div class="img_box"><img src="attach/${dto.getAttach()}"></div>
                                 </a>
                             </div>
@@ -144,6 +165,7 @@
                                 <p class="product_price">${dto.getPrice() }원</p>
                             </div>
                         </div>
+                      
                     </c:forEach>   
                     </div>
                 </div>

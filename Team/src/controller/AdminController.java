@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,21 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import command_product.Product_Save;
-import command_product.SearchList;
-import common.CommonExcute;
+import dao.AdminDao;
+import dto.AdminDto;
 
 /**
- * Servlet implementation class ProductController
+ * Servlet implementation class AdminController
  */
-@WebServlet("/ProductController")
-public class ProductController extends HttpServlet {
+@WebServlet("/AdminController")
+public class AdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ProductController() {
+    public AdminController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,42 +33,30 @@ public class ProductController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
+		AdminDao dao = new AdminDao();
 		String gubun = request.getParameter("t_gubun");
-		if(gubun == null) gubun="memberLogin";
+		if(gubun == null) gubun="myPage";
 		String viewPage="";
 		
-		//업로드 폼
-		if(gubun.equals("uploadForm")) {
-			viewPage = "product/upload.jsp";
+		if(gubun.equals("myPage")) {
+			ArrayList<AdminDto> productlist = dao.getProductList();
+			request.setAttribute("t_productlist", productlist);
+			viewPage = "admin/admin.jsp";
 			
-		//업로드 세이브	
-		}else if(gubun.equals("uploadSave")) {
-			CommonExcute pro = new Product_Save();
-			pro.execute(request);
+		}else if(gubun.equals("gumsu")) {
+			String p_no = request.getParameter("p_no");
+			int result = dao.getGumsu(p_no);
+			
+			String msg = "검수실패!";
+			if(result == 1) msg = "검수완료!";
+			
+			request.setAttribute("t_msg", msg);
+			request.setAttribute("t_url", "Index");
+			
 			viewPage = "common_alert.jsp";
-			
-		//상품 뷰
-		}else if(gubun.equals("view")) {
-			viewPage = "product/product_view.jsp";
-			
-		//상품 구매페이지	
-		}else if(gubun.equals("buy")) {
-			viewPage = "product/product_pay.jsp";
-			
-		}else if(gubun.equals("payment")) {
-			viewPage = "product/payment.jsp";
-			
-		}else if(gubun.equals("complete")) {
-			viewPage = "product/complete.jsp";
-			
-		//검색	
-		}else if(gubun.equals("search")) {
-			CommonExcute pro = new SearchList();
-			pro.execute(request);
-			viewPage = "product/search.jsp";
 		}
 		
-		RequestDispatcher rd= request.getRequestDispatcher(viewPage);
+		RequestDispatcher rd = request.getRequestDispatcher(viewPage);
 		rd.forward(request, response);
 	}
 

@@ -26,6 +26,17 @@
 		mem.action="ProductController";
 		mem.submit();
 	}
+	function goIndex(){
+		mem.method="post";
+		mem.action="Index";
+		mem.submit();
+	}
+	function goMypage(gubun){
+		mem.t_gubun.value = gubun;
+		mem.method="post";
+		mem.action="AdminController";
+		mem.submit();
+	}
 </script>
     
 </head>
@@ -45,7 +56,7 @@
                         	<li><a href="javascript:goMemberPage('memberLogin')">로그인</a></li>
                         	<li><a href="javascript:goMemberPage('memberJoin')">회원가입</a></li>
                         <%} else{%>
-                       		 <li><a href="">마이페이지</a></li>
+                       		 <li><a href="javascript:goMypage('myPage')">마이페이지</a></li>
                        		 <li><a href="javascript:goUpload('uploadForm')">상품등록</a></li>
                        		 <li><a href="javascript:goMemberPage('memberLogout')">로그아웃</a></li>
                         <%} %>
@@ -55,6 +66,6 @@
             <div class="header_main">
                 <div class="main_in">
                     <div class="logo">
-                        <a href="index.jsp"><img src="image/logo.png" style="width: 140px; height: 50px;"></a>
+                        <a href="javascript:goIndex()"><img src="image/logo.png" style="width: 140px; height: 50px;"></a>
                     </div>
                     <div class="center"></div>

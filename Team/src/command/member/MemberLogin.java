@@ -37,7 +37,7 @@ public class MemberLogin implements CommonExcute {
 			session.setAttribute("sessionId", id);
 			
 			session.setMaxInactiveInterval(60*60*3);
-			url="index.jsp";
+			url="Index";
 		}
 		
 		request.setAttribute("t_msg", msg);
